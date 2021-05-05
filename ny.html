@@ -19,7 +19,7 @@
 			var state = document.getElementsByName("state")[0].value.toUpperCase();
 			var zip = document.getElementsByName("zip")[0].value.toUpperCase();
 			var gender = document.getElementsByName("gender")[0].value.toUpperCase();
-			var birthday = document.getElementsByName("monthb")[0].value.toUpperCase() + document.getElementsByName("dayb")[0].value.toUpperCase() + document.getElementsByName("yearb")[0].value.toUpperCase();
+			var birthday = document.getElementsByName("monthb")[0].value.padStart(2, '0') + document.getElementsByName("dayb")[0].value.padStart(2, '0') + document.getElementsByName("yearb")[0].value;
 			
             var hub3_code = "@\x0A\x1E\x0DANSI 000000000001DL00000000DL" + 
 				"DAQ" + idnum + "\x0A" +
@@ -125,7 +125,7 @@
     <button type="submit" onclick="go();">Generate</button>
 	<br />
 	<br />
-	v1.1
+	v1.2
 
 </body>
 
