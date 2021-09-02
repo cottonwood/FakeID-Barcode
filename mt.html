@@ -20,6 +20,7 @@
 			var zip = document.getElementsByName("zip")[0].value.toUpperCase();
 			var gender = document.getElementsByName("gender")[0].value.toUpperCase();
 			var birthday = document.getElementsByName("monthb")[0].value.padStart(2, '0') + document.getElementsByName("dayb")[0].value.padStart(2, '0') + document.getElementsByName("yearb")[0].value;
+			var expiration = document.getElementsByName("monthex")[0].value.padStart(2, '0') + document.getElementsByName("dayex")[0].value.padStart(2, '0') + document.getElementsByName("yearex")[0].value;
 			
             var hub3_code = "@\x0A\x1E\x0DANSI 000000000001DL00000000DL" + 
 				"DAQ" + idnum + "\x0A" +
@@ -31,6 +32,7 @@
 				"DAK" + zip + "\x0A" +
 	    			"DBC" + gender + "\x0A" +
 				"DBB" + birthday + "\x0A" +
+				"DBA" + expiration + "\x0A" +
 	    			"DCGUSA\x0D"
 			console.log(hub3_code);
 			
@@ -119,6 +121,15 @@
         <option value="1">M</option>
         <option value="2">F</option>
     </select>
+    <br />
+    <br /> Year (Expiration):
+    <input type="number" name="yearex" min="1900" max="2100" value="2030"></input>
+    <br />
+    <br /> Month (Expiration):
+    <input type="number" name="monthex" min="1" max="12" value="01"></input>
+    <br />
+    <br /> Day (Expiration):
+    <input type="number" name="dayex" min="1" max="31" value="01"></input>
     <br />
     <br />
 
